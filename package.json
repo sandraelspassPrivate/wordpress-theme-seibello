@@ -1,0 +1,41 @@
+{
+  "name": "WordPressTheme",
+  "description": "WordPress default Theme",
+  "version": "0.0.1",
+  "license": "UNLICENSED",
+  "keywords": [],
+  "author": "selspass",
+  "contributors": [],
+  "homepage": "sandraelspass.de",
+  "scripts": {
+    "build": "grunt build",
+    "watch": "grunt"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^7.2.3",
+    "babel-core": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "cssnano": "^3.10.0",
+    "eslint": "^4.13.1",
+    "eslint-plugin-import": "^2.8.0",
+    "grunt": "^1.0.1",
+    "grunt-babel": "^7.0.0",
+    "grunt-contrib-clean": "^1.1.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-uglify": "^3.2.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-eslint": "^20.1.0",
+    "grunt-postcss": "^0.9.0",
+    "grunt-sass": "^2.0.0",
+    "grunt-stylelint": "^0.9.0",
+    "grunt-timer": "^0.6.0",
+    "load-grunt-tasks": "^3.5.2",
+    "node-sass": "^4.7.2",
+    "postcss": "^6.0.14",
+    "stylelint": "^8.4.0",
+    "stylelint-config-standard": "^18.0.0",
+    "stylelint-scss": "^2.2.0"
+  }
+}

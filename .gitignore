@@ -1,0 +1,11 @@
+//
+.idea
+.git
+
+// node modules
+node_modules
+
+// files
+*.db
+package-lock.json
+Thumbs.db

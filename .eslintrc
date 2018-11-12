@@ -1,0 +1,55 @@
+{
+  "extends": "eslint:recommended",
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "jquery": true,
+    "amd": true
+  },
+  "globals": {
+    "JSConf": true,
+    "Foundation": true,
+    "selectric": true,
+    "moment": true,
+    "Handlebars": true
+  },
+  "rules": {
+    "no-console": ["warn", {
+      "allow": ["warn", "error", "clear", "group"]
+    }],
+    "indent": ["error", 4, {
+      "SwitchCase": 1,
+      "VariableDeclarator": 1,
+      "outerIIFEBody": 1,
+      "MemberExpression": "off",
+      "FunctionExpression": {"body": 1, "parameters": 1},
+      "FunctionDeclaration": {"body": 1, "parameters": 1},
+      "CallExpression": {"arguments": 1},
+      "ArrayExpression": 1,
+      "ObjectExpression": 1
+    }],
+    "linebreak-style": ["warn", "windows"],
+    "newline-per-chained-call": ["error", {
+      "ignoreChainWithDepth": 2
+    }],
+    "vars-on-top": "off",
+    "no-var": "off",
+    "no-unused-vars": ["warn", {
+      "vars": "all",
+      "args": "after-used"
+    }],
+    "no-underscore-dangle": ["off", {
+      "allowAfterThis": true
+      }],
+    "no-whitespace-before-property": ["error"],
+    "comma-dangle": ["error", {
+      "arrays": "only-multiline",
+      "objects": "only-multiline",
+      "imports": "never",
+      "exports": "never",
+      "functions": "never"
+    }],
+    "padded-blocks": ["error", "never"],
+    "no-restricted-syntax": ["error", "FunctionDeclaration", "WithStatement", "BinaryExpression[operator='in']"]
+  }
+}
