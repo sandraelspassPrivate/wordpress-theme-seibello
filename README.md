@@ -14,4 +14,4 @@ Dies ist mein erstes WordPress Theme das ich komplett selber geschrieben habe. H
 Das Theme wurde mit dem CSS Framework Foundation erstellt. (https://foundation.zurb.com/)
 Bei diesem Theme habe ich mich für dars **XY Grid** entschieden.
 
-# Weitere Informationen folgen wenn ich welche habe :) 
+# Weitere Informationen folgen wenn ich welche habe :)

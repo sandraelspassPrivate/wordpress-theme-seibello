@@ -113,7 +113,7 @@ module.exports = function(grunt) {
                     'src/js/lib/foundation/foundation.util.triggers.js',
 
                     // cookiebar
-                    'src/js/lib/jquery.cookieBar.js',
+                    'src/js/lib/jquery.cookieBar.js'
                 ],
                 dest: 'dist/js/lib.es2015.js'
             },
@@ -200,7 +200,6 @@ module.exports = function(grunt) {
 
     // loads all tasks found in package.json
     require('load-grunt-tasks')(grunt);
-    grunt.loadNpmTasks('grunt-git');
     grunt.loadNpmTasks('grunt-stylelint');
     grunt.loadNpmTasks('grunt-postcss');
 
@@ -208,10 +207,9 @@ module.exports = function(grunt) {
     grunt.registerTask('default', [ 'watch' ]);
 
     // compile js-lib manually when changed!
-    grunt.registerTask('js-conf', [ 'concat:conf' ]);
     grunt.registerTask('js-lib', [ 'concat:lib', 'babel', 'uglify:lib' ]);
     grunt.registerTask('js-custom', [ 'eslint', 'concat:custom', 'uglify:custom' ]);
     grunt.registerTask('css', [ 'stylelint', 'sass', 'postcss' ]);
-    grunt.registerTask('build', [ 'svg', 'css', 'js-conf', 'js-lib', 'js-custom' ]);
+    grunt.registerTask('build', [ 'css', 'js-lib', 'js-custom' ]);
 
 };
