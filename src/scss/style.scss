@@ -1,7 +1,5 @@
 /**
  * all global project vars in framework/foundation/settings !!
- * feel free to structure & comment your variables like the other stuff in settings.scss :)
- * @see 36. kernpunkt settings
  */
 
 // self written mixins
@@ -9,12 +7,8 @@
 
 // import project wide stuff
 // "FRAMEWORK"
-//@import "";
+@import "framework/base";
 
-// import layout relevant styles
-// "SEITENTEMPLATES"
-//@import "";
-
-// import styles for modules
-// "ABSATZTEMPLATES"
-//@import "";
+// import styles for project
+// "PROJECT RELEVANT CSS"
+@import "project/base";

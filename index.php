@@ -4,19 +4,23 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <link rel="stylesheet" href="dist/css/style.css">
   </head>
   <body>
-    <div class="grid-container">
-      <div class="grid-x grid-padding-x">
-        <div class="large-12 cell">
-          <h1>Welcome to Foundation</h1>
-        </div>
-      </div>
 
-<?php echo get_template_directory_uri(). '/assets/js/vendor/foundation.min.js'; ?>
   
-      
-    </div>
+
+
+  <div class="row">
+      <div class="columns large-12">
+
+          <h1>Mein Wordpress Theme</h1>
+
+          <p>test hdfklshfdkl hskldfh </p>
+      </div>
+  </div>
+
 
   </body>
 </html>

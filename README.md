@@ -11,7 +11,12 @@ Dies ist mein erstes WordPress Theme das ich komplett selber geschrieben habe. H
 ### Happy Coding!
 
 # Framework
-Das Theme wurde mit dem CSS Framework Foundation erstellt. (https://foundation.zurb.com/)
-Bei diesem Theme habe ich mich für dars **XY Grid** entschieden.
+Das Theme wurde mit dem CSS Framework Foundation in der Version 6.2.1 erstellt. (https://foundation.zurb.com/)
+
+
+## Foundation 6
+Mit Foundation 6 hat Zurb die neueste Version seines UI-Frameworks gelauncht.
+
+
 
 # Weitere Informationen folgen wenn ich welche habe :)

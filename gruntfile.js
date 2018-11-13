@@ -33,13 +33,15 @@ module.exports = function(grunt) {
                 configFile: '.stylelintrc',
                 formatter: 'string',
                 ignoreDisables: false,
-                failOnError: true,
+                failOnError: false,
                 outputFile: '',
                 reportNeedlessDisables: false,
                 syntax: 'scss'
             },
             src: [
-                'src/scss/**/*.scss'
+                'src/scss/**/*.scss',
+                '!src/scss/framework/**/*.scss',
+                '!src/scss/modules/plugins/**/*.scss'
             ]
         },
 
@@ -170,6 +172,18 @@ module.exports = function(grunt) {
             }
         },
 
+        // https://github.com/gruntjs/grunt-contrib-copy/
+        // ** use grunt copy to copy the files manual ***
+        copy: {
+            fonts: {
+                files: [{
+                    expand: true,
+                    cwd: 'src/fonts',
+                    src: ['**'],
+                    dest: 'dist/fonts'
+                }]
+            }
+        },
 
         // https://github.com/gruntjs/grunt-contrib-watch
         watch: {
@@ -195,6 +209,7 @@ module.exports = function(grunt) {
                     spawn: false
                 }
             }
+
         }
     });
 
@@ -202,6 +217,7 @@ module.exports = function(grunt) {
     require('load-grunt-tasks')(grunt);
     grunt.loadNpmTasks('grunt-stylelint');
     grunt.loadNpmTasks('grunt-postcss');
+    grunt.loadNpmTasks('grunt-contrib-copy');
 
     // where we tell grunt what to do when we type "grunt" into the terminal
     grunt.registerTask('default', [ 'watch' ]);
@@ -210,6 +226,7 @@ module.exports = function(grunt) {
     grunt.registerTask('js-lib', [ 'concat:lib', 'babel', 'uglify:lib' ]);
     grunt.registerTask('js-custom', [ 'eslint', 'concat:custom', 'uglify:custom' ]);
     grunt.registerTask('css', [ 'stylelint', 'sass', 'postcss' ]);
-    grunt.registerTask('build', [ 'css', 'js-lib', 'js-custom' ]);
+    grunt.registerTask('copy-files', [ 'copy:fonts' ]);
+    grunt.registerTask('build', [ 'css', 'js-lib', 'js-custom', 'copy-files' ]);
 
 };
